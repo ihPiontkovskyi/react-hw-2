@@ -3,12 +3,14 @@ import cx from 'classnames';
 import ContextSampleApp from './ContextSampleApp';
 import RenderPropsApp from './RenderPropsApp';
 import RoutingSampleApp from './RoutingSampleApp';
+import FormSampleApp from './FormSampleApp';
 import './app.css';
 
 const APPS = {
   RENDER_PROPS_APP: 'Render Props',
   CONTEXT_SAMPLE_APP: 'Context API',
   ROUTING_SAMPLE_APP: 'Routing',
+  FORM_SAMPLE_APP: 'Form',
 };
 
 export const App = () => {
@@ -51,6 +53,7 @@ export const App = () => {
         {isCurrentApp(APPS.RENDER_PROPS_APP) && <RenderPropsApp />}
         {isCurrentApp(APPS.CONTEXT_SAMPLE_APP) && <ContextSampleApp />}
         {isCurrentApp(APPS.ROUTING_SAMPLE_APP) && <RoutingSampleApp />}
+        {isCurrentApp(APPS.FORM_SAMPLE_APP) && <FormSampleApp />}
       </main>
     </div>
   );

@@ -1,0 +1,37 @@
+.form {
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+.field label,
+.field input,
+.field .error {
+  font-size: inherit;
+}
+
+.field input {
+  margin: 0 16px;
+}
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.form-fields-values {
+  background: #f5f5f5;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.buttons {
+  display: flex;
+}
+.buttons button {
+  margin-right: 16px;
+  font-size: 20px;
+  border-radius: 8px;
+}
