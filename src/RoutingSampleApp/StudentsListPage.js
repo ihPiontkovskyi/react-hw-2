@@ -6,7 +6,7 @@ export default () => {
   return (
     <div>
       {STUDENTS.map(student => (
-        <div>
+        <div key={student.id}>
           <Link to={`/students/${student.id}`}>{student.name}</Link> (
           {student.score})
         </div>

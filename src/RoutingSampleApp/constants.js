@@ -45,7 +45,7 @@ export const STUDENTS = [
     score: 71,
   },
   {
-    id: 1,
+    id: 10,
     name: 'Christen Huffstutle',
     score: 59,
   },

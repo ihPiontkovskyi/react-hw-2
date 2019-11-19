@@ -25,7 +25,7 @@ const validate = values => {
 
 const FormSampleApp = () => (
   <div className="form">
-    <h2>Login (with validation) </h2>
+    <h2>Login (sync validation) </h2>
     <Form onSubmit={onSubmit} validate={validate}>
       {({handleSubmit, form, submitting, pristine, values}) => (
         <form onSubmit={handleSubmit}>
