@@ -1,0 +1,26 @@
+.csa-wrapper {
+  padding: 16px;
+  border: solid 2px red;
+}
+
+.csa-main {
+  padding: 16px;
+  border: solid 2px blue;
+}
+
+.csa-button {
+  font-size: 20px;
+  margin: 16px 0;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.csa-button_light {
+  color: black;
+  background: #f5f5f5;
+}
+
+.csa-button_dark {
+  color: white;
+  background: black;
+}

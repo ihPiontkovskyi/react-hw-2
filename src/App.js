@@ -1,26 +1,56 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import cx from 'classnames';
+import ContextSampleApp from './ContextSampleApp';
+import RenderPropsApp from './RenderPropsApp';
+import './app.css';
 
-function App() {
+const APPS = {
+  RENDER_PROPS_APP: 'Render Props',
+  CONTEXT_SAMPLE_APP: 'Context API',
+};
+
+export const App = () => {
+  const [currentApp, setCurrentApp] = useState();
+
+  const isCurrentApp = app => app === currentApp;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="app">
+      <header className="header">
+        <h3
+          onClick={() => {
+            setCurrentApp(null);
+          }}
         >
-          Learn React
-        </a>
+          #react-course
+        </h3>
+        <div className="header-apps">
+          {Object.values(APPS).map(app => {
+            const classes = cx('header-app', {
+              'header-app_active': isCurrentApp(app),
+            });
+
+            const handleAppClick = () => {
+              setCurrentApp(app);
+            };
+
+            return (
+              <div key={app} className={classes} onClick={handleAppClick}>
+                {app}
+              </div>
+            );
+          })}
+        </div>
       </header>
+      <main className="content">
+        {!currentApp && (
+          <h2 className="description">Select app from the list above {'⬆️'}</h2>
+        )}
+        {isCurrentApp(APPS.RENDER_PROPS_APP) && <RenderPropsApp />}
+        {isCurrentApp(APPS.CONTEXT_SAMPLE_APP) && <ContextSampleApp />}
+      </main>
     </div>
   );
-}
+};
 
 export default App;
