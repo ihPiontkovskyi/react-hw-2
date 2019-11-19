@@ -2,11 +2,13 @@ import React, {useState} from 'react';
 import cx from 'classnames';
 import ContextSampleApp from './ContextSampleApp';
 import RenderPropsApp from './RenderPropsApp';
+import RoutingSampleApp from './RoutingSampleApp';
 import './app.css';
 
 const APPS = {
   RENDER_PROPS_APP: 'Render Props',
   CONTEXT_SAMPLE_APP: 'Context API',
+  ROUTING_SAMPLE_APP: 'Routing',
 };
 
 export const App = () => {
@@ -48,6 +50,7 @@ export const App = () => {
         )}
         {isCurrentApp(APPS.RENDER_PROPS_APP) && <RenderPropsApp />}
         {isCurrentApp(APPS.CONTEXT_SAMPLE_APP) && <ContextSampleApp />}
+        {isCurrentApp(APPS.ROUTING_SAMPLE_APP) && <RoutingSampleApp />}
       </main>
     </div>
   );

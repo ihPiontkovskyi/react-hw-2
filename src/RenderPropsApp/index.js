@@ -45,7 +45,7 @@ const STUDENTS = [
   },
 ];
 
-export const RenderPropsApp = () => {
+const RenderPropsApp = () => {
   const [search, setSearch] = useState('');
   const [order, setOrder] = useState('asc');
 

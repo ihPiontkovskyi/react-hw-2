@@ -43,7 +43,7 @@ const Main = () => {
   );
 };
 
-export const ContextSampleApp = () => (
+const ContextSampleApp = () => (
   <Wrapper>
     <Main />
   </Wrapper>
