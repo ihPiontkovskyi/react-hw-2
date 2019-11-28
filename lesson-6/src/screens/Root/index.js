@@ -9,6 +9,8 @@ import Header from './Header';
 import StudentsListScreen from '../StudentsListScreen';
 import StudentScreen from '../StudentScreen';
 import {Switch, BrowserRouter, Route, Redirect} from 'react-router-dom';
+import StudentDeleteScreen from "../StudentDeleteScreen";
+import NotFoundScreen from "../NotFoundScreen";
 
 const theme = createMuiTheme({
   palette: {
@@ -40,6 +42,12 @@ const Root = () => {
                 exact
                 component={StudentScreen}
               />
+              <Route
+                  path="/students/delete/:studentId"
+                  exact
+                  component={StudentDeleteScreen}
+              />
+              <Route path="/http404" exact component={NotFoundScreen} />
             </Switch>
           </div>
         </BrowserRouter>

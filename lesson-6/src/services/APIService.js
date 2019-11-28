@@ -3,7 +3,7 @@ import uuid from 'uuid/v1';
 let students = [
   {
     id: '5ddac0be49c3b1968b8c98c8',
-    avatar: 'https://api.adorable.io/avatars/285/Slater',
+      avatar: 'https://api.adorable.io/avatars/285/Slater',
     name: 'Callie Andrews',
     address: '823 Brightwater Court, Springhill, Utah, 8664',
   },
@@ -51,7 +51,6 @@ export const getAllStudents = () => {
 
 export const getStudent = studentId => {
   const student = students.find(s => s.id === studentId);
-
   return student;
 };
 
@@ -65,7 +64,10 @@ export const addStudent = student => {
 
   return extendedStudent;
 };
-
+export const checkStudentId = studentId => {
+  const student = students.find(s => s.id === studentId);
+  return !!student;
+};
 export const updateStudent = (studentId, updatedStudent) => {
   const studentIndex = students.findIndex(s => s.id === studentId);
 
